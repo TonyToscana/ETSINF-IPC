@@ -16,13 +16,14 @@ public class Controller {
 
     int column, fila;
 
-    @Override
+
     public void initialize(URL url, ResourceBundle rb) {
 
     }
 
     @FXML
     private void handleKeyPressedBolita(KeyEvent event) {
-
+        GridPane.getColumnIndex(circleBolita);
+        GridPane.getRowIndex(circleBolita);
     }
 }
