@@ -24,3 +24,5 @@ hs_err_pid*
 */workspace\.xml
 
 PRACT1/\.idea/workspace\.xml
+
+PRACT1/\.idea/kotlinc\.xml
