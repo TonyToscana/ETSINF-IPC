@@ -16,10 +16,11 @@ public class Controller {
     @FXML
     private GridPane gridBolita;
 
-    int column, row;
+    private int column, row;
+
     private final String[] KONAMI_CODE = {"UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "B", "A"};
     private final String[] COLORS = {"RED", "BLUE", "GREEN", "BLACK", "GRAY", "PURPLE", "PINK", "GOLD", "SILVER"};
-    private static int estado = 0;
+    private int estado = 0;
 
     public void initialize() {
         column = GridPane.getColumnIndex(circleBolita);
