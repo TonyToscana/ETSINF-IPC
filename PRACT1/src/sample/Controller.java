@@ -17,9 +17,9 @@ public class Controller {
     private GridPane gridBolita;
 
     int column, row;
-    private static final String konamiCode = "UPUPDOWNDOWNLEFTRIGHTLEFTRIGHTBA";
+    private final String[] KONAMI_CODE = {"UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "B", "A"};
     private final String[] COLORS = {"RED", "BLUE", "GREEN", "BLACK", "GRAY", "PURPLE", "PINK", "GOLD", "SILVER"};
-    private String buffer = "";
+    private static int estado = 0;
 
     public void initialize() {
         column = GridPane.getColumnIndex(circleBolita);
@@ -30,48 +30,44 @@ public class Controller {
     private void handleKeyPressedBolita(KeyEvent event) {
         switch (event.getCode()) {
             case DOWN:
-                buffer += event.getCode();
-                checkKonamiCode();
+                checkKonamiCode(event.getCode());
                 if (!(row == 4)) {
                     GridPane.setRowIndex(circleBolita, ++row);
                 }
                 break;
             case UP:
-                buffer += event.getCode();
-                checkKonamiCode();
+                checkKonamiCode(event.getCode());
                 if (!(row == 0)) {
                     GridPane.setRowIndex(circleBolita, --row);
                 }
                 break;
             case LEFT:
-                buffer += event.getCode();
-                checkKonamiCode();
+                checkKonamiCode(event.getCode());
                 if (!(column == 0)) {
                     GridPane.setColumnIndex(circleBolita, --column);
                 }
                 break;
             case RIGHT:
-                buffer += event.getCode();
-                checkKonamiCode();
+                checkKonamiCode(event.getCode());
                 if (!(column == 4)) {
                     GridPane.setColumnIndex(circleBolita, ++column);
                 }
                 break;
             default:
-                buffer += event.getCode();
-                checkKonamiCode();
-                System.out.println(buffer);
+                checkKonamiCode(event.getCode());
                 break;
 
         }
     }
 
-    private void checkKonamiCode(){
-        if ((buffer.length() >= konamiCode.length()) &&
-                (buffer.substring(buffer.length()-konamiCode.length()).equals(konamiCode))) {
-            circleBolita.setFill(Paint.valueOf(COLORS[(int) (Math.random() * 9)]));
-            buffer = "";
-        }
+    private void checkKonamiCode(KeyCode code){
+        if (KONAMI_CODE[estado].equals(code.toString())) {
+            ++estado;
+        } else estado = 0;
 
+        if (estado == 10) {
+            circleBolita.setFill(Paint.valueOf(COLORS[(int) (Math.random() * COLORS.length)]));
+            estado = 0;
+        }
     }
 }
