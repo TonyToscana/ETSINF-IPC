@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -625,7 +624,7 @@
       <workItem from="1519128719164" duration="3904000" />
       <workItem from="1519196757685" duration="10000" />
       <workItem from="1519635051204" duration="5123000" />
-      <workItem from="1519640835780" duration="565000" />
+      <workItem from="1519640835780" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic structure">
       <created>1519132339988</created>
@@ -655,11 +654,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519640132020</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Better implementation of Konami Code">
+      <created>1519641414391</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519641414392</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10944000" />
+    <option name="totallyTimeSpent" value="10964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="965" y="-7" width="945" height="1058" extended-state="0" />
@@ -714,7 +720,8 @@
     <MESSAGE value="Update Controller" />
     <MESSAGE value="Add bolita management" />
     <MESSAGE value="Add Konami Code easter egg" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Konami Code easter egg" />
+    <MESSAGE value="Better implementation of Konami Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better implementation of Konami Code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
