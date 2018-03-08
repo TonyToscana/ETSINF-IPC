@@ -7,9 +7,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class Controller {
     @FXML
     private Circle circleBolita;
