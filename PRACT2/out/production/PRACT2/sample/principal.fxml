@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Principal">
+   <children>
+      <ListView fx:id="id_namesList">
+         <HBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </HBox.margin>
+      </ListView>
+      <VBox prefHeight="200.0">
+         <children>
+            <Button fx:id="id_add" mnemonicParsing="false" onAction="#event_add" prefWidth="100.0" text="Add">
+               <VBox.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="id_remove" mnemonicParsing="false" onAction="#event_remove" prefWidth="100.0" text="Remove">
+               <VBox.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="id_modify" mnemonicParsing="false" onAction="#event_modify" prefWidth="100.0" text="Modify">
+               <VBox.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
