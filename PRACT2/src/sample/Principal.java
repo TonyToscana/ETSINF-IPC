@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Principal {
-    private static ObservableList<Person> namesList;
+    private ObservableList<Person> namesList;
 
     @FXML
     private ListView<Person> id_namesList;
@@ -31,7 +31,7 @@ public class Principal {
     @FXML
     private Button id_modify;
 
-    class PersonCall extends ListCell<Person> {
+    /*class PersonCall extends ListCell<Person> {
         @Override
         public void updateItem(Person p, boolean e) {
             if (p == null || e) {
@@ -40,16 +40,17 @@ public class Principal {
                 setText(p.getFirstName() + ", " + p.getLastName());
             }
         }
-    }
+    }*/
 
     //@Override
     public void initialize(){
         namesList = FXCollections.observableArrayList(new ArrayList<Person>());
+
         namesList.add(new Person("Miguel", "Edo"));
         namesList.add(new Person("Borja", "Palomo"));
-        id_namesList.setItems(namesList);
 
-        id_namesList.setCellFactory((c) -> { return new PersonCall(); } );
+        id_namesList.setItems(namesList);
+        //id_namesList.setCellFactory((c) -> { return new PersonCall(); } );
     }
 
     public void namesListAdd(Person per){

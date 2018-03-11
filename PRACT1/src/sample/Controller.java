@@ -16,7 +16,7 @@ public class Controller {
     private int column, row;
 
     private final String[] KONAMI_CODE = {"UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "B", "A"};
-    private final String[] COLORS = {"RED", "BLUE", "GREEN", "BLACK", "GRAY", "PURPLE", "PINK", "GOLD", "SILVER"};
+    private final String[] COLORS = {"RED", "BLUE", "GREEN", "BLACK", "GRAY", "PURPLE", "PINK", "GOLD", "SILVER", "DODGERBLUE", "#00ff00"};
     private int estado = 0;
 
     public void initialize() {

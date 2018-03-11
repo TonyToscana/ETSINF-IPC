@@ -1,8 +1,6 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("principal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainController.fxml"));
         primaryStage.setTitle("Lista de invitados");
         primaryStage.setScene(new Scene(root, 400, 300));
         primaryStage.show();
@@ -23,4 +21,3 @@ public class Main extends Application {
         launch(args);
     }
 }
-
