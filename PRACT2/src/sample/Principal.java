@@ -31,6 +31,7 @@ public class Principal {
     @FXML
     private Button id_modify;
 
+<<<<<<< Updated upstream
     /*class PersonCall extends ListCell<Person> {
         @Override
         public void updateItem(Person p, boolean e) {
@@ -41,6 +42,8 @@ public class Principal {
             }
         }
     }*/
+=======
+>>>>>>> Stashed changes
 
     //@Override
     public void initialize(){
@@ -48,9 +51,13 @@ public class Principal {
 
         namesList.add(new Person("Miguel", "Edo"));
         namesList.add(new Person("Borja", "Palomo"));
+<<<<<<< Updated upstream
 
         id_namesList.setItems(namesList);
         //id_namesList.setCellFactory((c) -> { return new PersonCall(); } );
+=======
+        id_namesList.setItems(namesList);
+>>>>>>> Stashed changes
     }
 
     public void namesListAdd(Person per){

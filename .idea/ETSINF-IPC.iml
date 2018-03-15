@@ -3,10 +3,18 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< Updated upstream
       <sourceFolder url="file://$MODULE_DIR$/PRACT2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PRACT1/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/PRACT1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/PRACT1/out" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.8 (1)" jdkType="JavaSDK" />
+>>>>>>> Stashed changes
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
