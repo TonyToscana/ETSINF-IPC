@@ -31,7 +31,6 @@ import java.util.ArrayList;
 
 public class MainController {
 
-
     @FXML
     private TableView<Person> tableView;
 
@@ -71,39 +70,42 @@ public class MainController {
         modifyButton.disableProperty().bind(
                 Bindings.isEmpty(tableView.getSelectionModel().getSelectedItems())
         );
+        //####################################################################
         observablePersonList.add(new Person(
                 1,
                 "Maria Jose",
-                new Residence("Ciudad", "Lo otro"),
+                new Residence("Ciudad", "Provincia"),
                 "./images/Lloroso.png"
         ));
+        observablePersonList.add(new Person(
+                2,
+                "Jose Maria",
+                new Residence("Ciudadela", "Provincieta"),
+                "./images/Sonriente.png"
+        ));
+        //####################################################################
         tableView.setItems(observablePersonList);
 
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("fullName"));
-        cityColumn.setCellValueFactory(param -> new SimpleObjectProperty<>(param.getValue().getResidence().getCity()));
-        imageColumn.setCellValueFactory(new PropertyValueFactory<>("pathImage"));
-
+        cityColumn.setCellValueFactory(param -> new SimpleObjectProperty<>(param.getValue().getResidence().getCity().toUpperCase()));
         imageColumn.setCellValueFactory(celda4 -> celda4.getValue().pathImageProperty());
-        imageColumn.setCellFactory( columna -> {
-            return new TableCell<Person,String>(){
-                private ImageView view = new ImageView();
-                @Override
-                protected void updateItem( String item, boolean empty){
-                    super.updateItem(item, empty);
-                    if(item==null || empty){
-                        setGraphic(null);
-                    }
-                    else{
-                        System.out.println(item + " -  " + new File(item).exists());
-                        Image image = new Image(MainController.class.getResourceAsStream(item),
-                                40,40,true,true);
-                        view.setImage(image);
-                        setGraphic(view);
-                    }
+        imageColumn.setCellFactory( (TableColumn<Person, String> columna) -> new TableCell<Person,String>(){
+            private ImageView view = new ImageView();
+            @Override
+            protected void updateItem( String item, boolean empty){
+                super.updateItem(item, empty);
+                if(item==null || empty){
+                    setGraphic(null);
                 }
-            };
-
+                else{
+                    //System.out.println(item + " -  " + new File(item).exists());
+                    Image image = new Image(MainController.class.getResourceAsStream(item),
+                            40,40,true,true);
+                    view.setImage(image);
+                    setGraphic(view);
+                }
+            }
         });
     }
 
@@ -121,6 +123,7 @@ public class MainController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
     @FXML
     void removePerson(ActionEvent event) {
         observablePersonList.remove(
@@ -146,7 +149,56 @@ public class MainController {
         stage.show();
     }
 
-    @FXML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* @FXML
     void onKeyPressed(KeyEvent event) {
         checkKonamiCode(event.getCode());
     }
@@ -164,9 +216,9 @@ public class MainController {
     @FXML
     void onModifyPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) modifyButton.fire();
-    }
+    }*/
 
-    private void checkKonamiCode(KeyCode code) {
+    /*private void checkKonamiCode(KeyCode code) {
         if (KONAMI_CODE[estado].equals(code.toString())) {
             ++estado;
         } else estado = 0;
@@ -175,7 +227,7 @@ public class MainController {
             //onExecutedKonamiCode();
             estado = 0;
         }
-    }
+    }*/
 
     //Add Doe family
     /*private void onExecutedKonamiCode() {

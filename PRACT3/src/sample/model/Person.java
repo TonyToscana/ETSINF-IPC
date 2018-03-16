@@ -59,6 +59,10 @@ public class Person {
         return id.get();
     }
 
+    public String getIdAsString() {
+        return id.get() + "";
+    }
+
     public void setId(int value) {
         id.set(value);
     }

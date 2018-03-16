@@ -55,11 +55,14 @@ public class AddController {
                 .or(Bindings.isEmpty(provinceField.textProperty()))
         );
 
-        //Temporary
-        ObservableList list = FXCollections.observableArrayList(new ArrayList<String>());
-        list.add("string");
-        imageDropdown.setItems(list);
+        ObservableList imgList = FXCollections.observableArrayList(new ArrayList<String>());
+        imgList.add("./images/Lloroso.png");
+        imgList.add("./images/Pregunta.png");
+        imgList.add("./images/Sonriente.png");
+        imageDropdown.setItems(imgList);
     }
+
+    @FXML
     void addPerson(ObservableList<Person> observableGuestList) {
         list = observableGuestList;
     }
@@ -76,15 +79,15 @@ public class AddController {
     //No se cierra al aceptar para facilitar la introduccion de grandes cantidades de personas
     @FXML
     void okAction(ActionEvent event) throws IOException {
-       list.add(
-                new Person(
-                        Integer.parseInt(idField.getText()),
-                        nameField.getText(),
-                        new Residence(cityField.getText(), provinceField.getText()),
-                        imageDropdown.selectionModelProperty().getName()
+        list.add(
+            new Person(
+                Integer.parseInt(idField.getText()),
+                nameField.getText(),
+                new Residence(cityField.getText(), provinceField.getText()),
+                imageDropdown.getSelectionModel().getSelectedItem().toString()
 
-                )
-       );
+            )
+        );
 
        idField.clear();
        nameField.clear();
