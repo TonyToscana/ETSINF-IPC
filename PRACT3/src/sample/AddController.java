@@ -42,8 +42,6 @@ public class AddController {
     private Button cancelButton;
 
     private ObservableList<Person> list;
-    private int index;
-    private Person person;
 
     @FXML
     void initialize() {

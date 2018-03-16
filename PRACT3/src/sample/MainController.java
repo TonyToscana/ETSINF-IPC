@@ -99,7 +99,6 @@ public class MainController {
                     setGraphic(null);
                 }
                 else{
-                    //System.out.println(item + " -  " + new File(item).exists());
                     Image image = new Image(MainController.class.getResourceAsStream(item),
                             40,40,true,true);
                     view.setImage(image);

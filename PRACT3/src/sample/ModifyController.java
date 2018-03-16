@@ -90,9 +90,7 @@ public class ModifyController {
     }
 
     @FXML
-    void okAction(ActionEvent event) throws IOException {
-        //person.setFirstName(firstNameTextField.getText());
-        //person.setLastName(lastNameTextField.getText());
+    void okAction(ActionEvent event) {
         person.setId(Integer.parseInt(idField.getText()));
         person.setFullName(nameField.getText());
         person.setResidence(
@@ -102,7 +100,7 @@ public class ModifyController {
                 )
         );
         person.setPathImage(imageDropdown.getSelectionModel().getSelectedItem().toString());
-        //list.set(index, person);
+        list.set(index, person);
 
         ((Node)(event.getSource())).getScene().getWindow().hide();
 
