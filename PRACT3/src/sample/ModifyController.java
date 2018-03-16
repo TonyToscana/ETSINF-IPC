@@ -3,13 +3,13 @@ package sample;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import sample.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
@@ -56,12 +56,45 @@ public class ModifyController {
                         .or(Bindings.isEmpty(provinceField.textProperty()))
         );
 
-        ObservableList imgList = FXCollections.observableArrayList(new ArrayList<String>());
+        //ObservableList imgList = FXCollections.observableArrayList(new ArrayList<String>());
+        ObservableList imgList = FXCollections.observableArrayList(new ArrayList<Image>());
 
         imgList.add("./images/Lloroso.png");
         imgList.add("./images/Pregunta.png");
         imgList.add("./images/Sonriente.png");
         imageDropdown.setItems(imgList);
+        imageDropdown.setCellFactory( cell -> new ListCell<String>(){
+            private ImageView view = new ImageView();
+            @Override
+            protected void updateItem( String item, boolean empty){
+                super.updateItem(item, empty);
+                if(item==null || empty){
+                    setGraphic(null);
+                }
+                else{
+                    Image image = new Image(MainController.class.getResourceAsStream(item),
+                            40,40,true,true);
+                    view.setImage(image);
+                    setGraphic(view);
+                }
+            }
+        });
+        imageDropdown.setButtonCell(cell -> new ListCell<String>(){
+            private ImageView view = new ImageView();
+            @Override
+            protected void updateItem( String item, boolean empty){
+                super.updateItem(item, empty);
+                if(item==null || empty){
+                    setGraphic(null);
+                }
+                else{
+                    Image image = new Image(MainController.class.getResourceAsStream(item),
+                            40,40,true,true);
+                    view.setImage(image);
+                    setGraphic(view);
+                }
+            }
+        });
     }
 
     @FXML
