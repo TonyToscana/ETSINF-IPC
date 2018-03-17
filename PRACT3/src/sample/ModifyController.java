@@ -42,6 +42,9 @@ public class ModifyController {
     @FXML
     private Button cancelButton;
 
+    @FXML
+    private Label warningLabel;
+
     private ObservableList<Person> list;
     private int index;
     private Person person;
@@ -79,7 +82,7 @@ public class ModifyController {
                 }
             }
         });
-        imageDropdown.setButtonCell(cell -> new ListCell<String>(){
+        imageDropdown.setButtonCell(new ListCell<String>(){
             private ImageView view = new ImageView();
             @Override
             protected void updateItem( String item, boolean empty){
@@ -124,23 +127,33 @@ public class ModifyController {
 
     @FXML
     void okAction(ActionEvent event) {
-        person.setId(Integer.parseInt(idField.getText()));
-        person.setFullName(nameField.getText());
-        person.setResidence(
-                new Residence(
-                        cityField.getText(),
-                        provinceField.getText()
-                )
-        );
-        person.setPathImage(imageDropdown.getSelectionModel().getSelectedItem().toString());
-        list.set(index, person);
+        if(!existsId(Integer.parseInt(idField.getText()))) {
+            warningLabel.setVisible(true);
+            person.setId(Integer.parseInt(idField.getText()));
+            person.setFullName(nameField.getText());
+            person.setResidence(
+                    new Residence(
+                            cityField.getText(),
+                            provinceField.getText()
+                    )
+            );
+            person.setPathImage(imageDropdown.getSelectionModel().getSelectedItem().toString());
+            list.set(index, person);
 
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-
+            ((Node) (event.getSource())).getScene().getWindow().hide();
+        } else warningLabel.setVisible(true);
     }
 
     @FXML
     void cancelAction(ActionEvent event) {
         ((Node)(event.getSource())).getScene().getWindow().hide();
+    }
+
+    boolean existsId(int id) {
+        for (Person p:
+                list) {
+            if(p.getId() == id) return true;
+        }
+        return false;
     }
 }

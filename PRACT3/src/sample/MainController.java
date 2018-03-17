@@ -148,58 +148,9 @@ public class MainController {
         stage.show();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /* @FXML
+    @FXML
     void onKeyPressed(KeyEvent event) {
-        checkKonamiCode(event.getCode());
+        //checkKonamiCode(event.getCode());
     }
 
     @FXML
@@ -215,7 +166,7 @@ public class MainController {
     @FXML
     void onModifyPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) modifyButton.fire();
-    }*/
+    }
 
     /*private void checkKonamiCode(KeyCode code) {
         if (KONAMI_CODE[estado].equals(code.toString())) {
