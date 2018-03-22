@@ -85,7 +85,7 @@ public class Controller {
     }
 
     void confirmationAlert(RadioMenuItem id){
-        String name = id.getText();
+        String name = id.getText().substring(1);
         if (id.selectedProperty().getValue()) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmación");
