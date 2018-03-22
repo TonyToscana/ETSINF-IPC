@@ -15,29 +15,29 @@
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="_Archivo">
+                <Menu text="_Archivo">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#eSalir" text="Salir" />
+                    <MenuItem onAction="#eSalir" text="_Salir" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="_Lanzar">
+                <Menu text="_Lanzar">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#eAmazon" text="Amazon" />
-                        <MenuItem mnemonicParsing="false" onAction="#eBlogger" text="Blogger" />
-                        <MenuItem mnemonicParsing="false" onAction="#eEbay" text="Ebay" />
-                        <MenuItem mnemonicParsing="false" onAction="#eFacebook" text="Facebook" />
-                        <MenuItem mnemonicParsing="false" text="Google+" />
+                        <MenuItem onAction="#eAmazon" text="_Amazon" />
+                        <MenuItem onAction="#eBlogger" text="_Blogger" />
+                        <MenuItem onAction="#eEbay" text="_Ebay" />
+                        <MenuItem onAction="#eFacebook" text="_Facebook" />
+                        <MenuItem text="_Google+" />
                      </items></Menu>
-                <Menu mnemonicParsing="false" text="_Opciones">
+                <Menu text="_Opciones">
                   <items>
-                        <Menu mnemonicParsing="false" text="Comprar en">
+                        <Menu text="_Comprar en">
                           <items>
-                              <RadioMenuItem fx:id="idOpcionesAmazon" mnemonicParsing="false" text="Amazon">
+                              <RadioMenuItem fx:id="idOpcionesAmazon" text="_Amazon">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="opciones" />
                                  </toggleGroup>
                               </RadioMenuItem>
-                              <RadioMenuItem fx:id="idOpcionesEbay" mnemonicParsing="false" text="Ebay" toggleGroup="$opciones" />
+                              <RadioMenuItem fx:id="idOpcionesEbay" text="_Ebay" toggleGroup="$opciones" />
                           </items>
                         </Menu>
                   </items>
