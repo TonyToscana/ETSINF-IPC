@@ -1,0 +1,38 @@
+
+.actionsButtons{
+    -fx-background-color: #9f9f9f;
+    -fx-background-radius: 0;
+    /*-fx-background-radius: 0,5,4;*/
+    -fx-background-insets: 0 0 -1 0,0,1;
+    /*-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );*/
+    /*-fx-text-alignment: center;*/
+}
+/*.actionsButtons:hover{
+
+    -fx-background-color:#64EE64;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-alignment: center;
+}*/
+.numberButtons{
+    -fx-background-color: #b7b7b7;
+    -fx-background-radius: 0;
+}
+.operationsButton{
+    -fx-background-color: #d46d00;
+    -fx-background-radius: 0;
+}
+.button{
+    -fx-border-color: #333333;
+    -fx-border-insets: 0px;
+    -fx-border-radius: 0px;
+    -fx-border-width: 1px;
+}
+.inputBar{
+    -fx-padding: 0px;
+    -fx-background-radius: 0;
+
+}
+.pane{
+    -fx-end-margin: 0px;
+    -fx-start-margin: 0px;
+}
