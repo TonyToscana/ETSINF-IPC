@@ -38,12 +38,14 @@
     -fx-background-color: #343434;
     -fx-background-radius: 0;
     /*-fx-padding: 0 15 15 0;*/
-    -fx-font-size: 50;
+    -fx-font-size: 80;
     -fx-text-fill: #b7b7b7;
     -fx-font-family: "DejaVu Sans Light";
 }
 .pane{
     -fx-end-margin: 0px;
     -fx-start-margin: 0px;
-    -fx-padding: 0px;
+    -fx-padding: 1px;
+    -fx-background-color: #343434;
+
 }
